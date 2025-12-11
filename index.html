@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="共に成長し、未来を創るビジネスパートナーを募集。事業拡大につき、長期的にご協力いただける協力会社様・個人事業主様を探しています。">
+    <meta name="robots" content="noindex, nofollow">
+    <title>協力会社（ビジネスパートナー）募集 | 共に成長し、未来を創る</title>
+    
+    <meta property="og:title" content="協力会社（ビジネスパートナー）募集 | 株式会社[クライアント名]">
+    <meta property="og:description" content="共に成長し、未来を創るビジネスパートナーを募集。事業拡大につき、長期的にご協力いただける協力会社様・個人事業主様を探しています。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kibou-no-hoshi.com/business-partner.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤝</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'navy': '#1e3a8a', 'gold': '#b45309' },
+                    fontFamily: { 'sans': ['Noto Sans JP', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        button, a { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+        
+        /* アニメーション定義 */
+        .fade-enter-active { transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-enter-from { opacity: 0; transform: translateY(30px); }
+        .fade-enter-to { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    
+    <header class="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-50" x-data="{ menuOpen: false }">
+        <nav class="container mx-auto pl-0 pr-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-navy tracking-tight">ビジネスパートナー募集</div>
+                <div class="hidden md:flex items-center space-x-6 font-medium">
+                    <a href="#benefits" class="text-gray-600 hover:text-navy transition">メリット</a>
+                    <a href="#requirements" class="text-gray-600 hover:text-navy transition">募集要項</a>
+                    <a href="#flow" class="text-gray-600 hover:text-navy transition">契約の流れ</a>
+                    <a href="#faq" class="text-gray-600 hover:text-navy transition">FAQ</a>
+                    <a href="#contact" class="bg-navy text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 duration-200">お問い合わせ</a>
+                </div>
+                <button @click="menuOpen = !menuOpen" class="md:hidden text-navy p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path x-show="!menuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path x-show="menuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div x-show="menuOpen" x-collapse class="md:hidden mt-4 pb-4 space-y-2 border-t pt-4">
+                <a href="#benefits" @click="menuOpen = false" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 rounded">メリット</a>
+                <a href="#requirements" @click="menuOpen = false" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 rounded">募集要項</a>
+                <a href="#flow" @click="menuOpen = false" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 rounded">契約の流れ</a>
+                <a href="#contact" @click="menuOpen = false" class="block mt-4 bg-navy text-white px-6 py-3 rounded-lg text-center mx-4">お問い合わせ</a>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="relative bg-navy text-white py-24 md:py-40 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80" 
+                 alt="オフィスイメージ" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/80 to-blue-900/70 mix-blend-multiply"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10" 
+             x-data="{ shown: false }" x-intersect.threshold.10="shown = true" 
+             :class="shown ? 'fade-enter-to' : 'fade-enter-from'" class="fade-enter-active">
+            <div class="max-w-4xl">
+                <span class="inline-block py-1 px-3 border border-gold text-gold text-sm font-bold tracking-wider mb-6 rounded">PARTNER RECRUITMENT</span>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
+                    共に成長し、未来を創る<br>ビジネスパートナーを募集
+                </h1>
+                <p class="text-lg md:text-xl mb-10 text-gray-200 max-w-2xl drop-shadow-md leading-relaxed">
+                    事業拡大につき、長期的な信頼関係を築ける<br class="hidden md:inline">協力会社様・個人事業主様を探しています。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-gold text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-yellow-700 transition shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-center">
+                        パートナーに応募する
+                    </a>
+                    <a href="#requirements" class="bg-white/10 backdrop-blur border border-white/30 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition text-center">
+                        募集要項を見る
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="benefits" class="py-20 md:py-32 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" x-data="{ shown: false }" x-intersect.threshold.20="shown = true" :class="shown ? 'fade-enter-to' : 'fade-enter-from'" class="fade-enter-active">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">パートナーのメリット</h2>
+                <div class="w-20 h-1 bg-gold mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-white p-10 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-b-4 border-transparent hover:border-gold group"
+                         x-data="{ shown: false }" x-intersect.threshold.20="shown = true" :class="shown ? 'fade-enter-to' : 'fade-enter-from'" class="fade-enter-active" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 bg-navy/10 text-navy rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-navy group-hover:text-gold transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-4 text-center">安定した案件供給</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        継続的な案件提供により、安定した収益機会を確保できます。単発ではなく、長期的なパートナーシップを重視しています。
+                    </p>
+                </article>
+                
+                <article class="bg-white p-10 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-b-4 border-transparent hover:border-gold group"
+                         x-data="{ shown: false }" x-intersect.threshold.20="shown = true" :class="shown ? 'fade-enter-to' : 'fade-enter-from'" class="fade-enter-active" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 bg-navy/10 text-navy rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-navy group-hover:text-gold transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-4 text-center">スピーディーな支払い</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        迅速な支払い処理により、資金繰りをスムーズに。月末締め翌月末払いなど、明確でクリーンな支払いサイトを約束します。
+                    </p>
+                </article>
+                
+                <article class="bg-white p-10 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-b-4 border-transparent hover:border-gold group"
+                         x-data="{ shown: false }" x-intersect.threshold.20="shown = true" :class="shown ? 'fade-enter-to' : 'fade-enter-from'" class="fade-enter-active" style="transition-delay: 300ms;">
+                    <div class="w-16 h-16 bg-navy/10 text-navy rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-navy group-hover:text-gold transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-4 text-center">対等なパートナーシップ</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        ただの下請けではなく、プロジェクトを共に成功させる「チームの一員」として尊重します。共に成長しましょう。
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <section id="requirements" class="py-20 md:py-32 bg-white">
+        <div class="container mx-auto px-4" x-data="{ shown: false }" x-intersect.threshold.10="shown = true" :class="shown ? 'fade-enter-to' : 'fade-enter-from'" class="fade-enter-active">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy mb-12">募集要項</h2>
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex flex-col h-full shadow-md rounded-lg overflow-hidden border border-gray-100">
+                        <dt class="bg-navy text-white px-6 py-4 font-bold flex items-center">
+                            <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>募集職種
+                        </dt>
+                        <dd class="bg-white p-6 text-gray-700 flex-grow">
+                            Web開発、システム開発、デザイン、マーケティング、営業支援など、幅広い分野で募集しています。
+                        </dd>
+                    </div>
+                    
+                    <div class="flex flex-col h-full shadow-md rounded-lg overflow-hidden border border-gray-100">
+                        <dt class="bg-navy text-white px-6 py-4 font-bold flex items-center">
+                            <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>対象エリア
+                        </dt>
+                        <dd class="bg-white p-6 text-gray-700 flex-grow">
+                            全国対応可能。リモートワーク対応も可能です。一部の案件では現地対応が必要な場合があります。
+                        </dd>
+                    </div>
+                    
+                    <div class="flex flex-col h-full shadow-md rounded-lg overflow-hidden border border-gray-100">
+                        <dt class="bg-navy text-white px-6 py-4 font-bold flex items-center">
+                            <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>支払条件
+                        </dt>
+                        <dd class="bg-white p-6 text-gray-700 flex-grow">
+                            月末締め翌月末払い（30日締め60日払い）。案件により異なる場合があります。詳細は面談時にご説明します。
+                        </dd>
+                    </div>
+                    
+                    <div class="flex flex-col h-full shadow-md rounded-lg overflow-hidden border border-gray-100">
+                        <dt class="bg-navy text-white px-6 py-4 font-bold flex items-center">
+                            <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>必須スキル
+                        </dt>
+                        <dd class="bg-white p-6 text-gray-700 flex-grow">
+                            各職種に応じた専門スキルが必要です。実務経験3年以上を推奨。ポートフォリオや実績の提出をお願いする場合があります。
+                        </dd>
+                    </div>
+                    
+                    <div class="flex flex-col h-full shadow-md rounded-lg overflow-hidden border border-gray-100">
+                        <dt class="bg-navy text-white px-6 py-4 font-bold flex items-center">
+                            <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>契約形態
+                        </dt>
+                        <dd class="bg-white p-6 text-gray-700 flex-grow">
+                            業務委託契約（個人事業主・法人どちらも可）。長期継続を前提とした契約を希望します。
+                        </dd>
+                    </div>
+                    
+                    <div class="flex flex-col h-full shadow-md rounded-lg overflow-hidden border border-gray-100">
+                        <dt class="bg-navy text-white px-6 py-4 font-bold flex items-center">
+                            <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>報酬体系
+                        </dt>
+                        <dd class="bg-white p-6 text-gray-700 flex-grow">
+                            案件ごとに設定。スキルや経験に応じて適正な報酬をお支払いします。詳細は個別にご相談ください。
+                        </dd>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="flow" class="py-20 md:py-32 bg-gray-50">
+        <div class="container mx-auto px-4" x-data="{ shown: false }" x-intersect.threshold.10="shown = true" :class="shown ? 'fade-enter-to' : 'fade-enter-from'" class="fade-enter-active">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy mb-16">契約までの流れ</h2>
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="relative text-center group">
+                        <div class="w-20 h-20 bg-white border-2 border-navy text-navy rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-md group-hover:bg-navy group-hover:text-white transition-colors duration-300 z-10 relative">1</div>
+                        <h3 class="text-lg font-bold text-navy mb-3">エントリー</h3>
+                        <p class="text-sm text-gray-600">お問い合わせフォームから<br>ご応募ください。</p>
+                        <div class="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gray-300 -z-0"></div>
+                    </div>
+                    <div class="relative text-center group">
+                        <div class="w-20 h-20 bg-white border-2 border-navy text-navy rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-md group-hover:bg-navy group-hover:text-white transition-colors duration-300 z-10 relative">2</div>
+                        <h3 class="text-lg font-bold text-navy mb-3">面談</h3>
+                        <p class="text-sm text-gray-600">オンラインまたは対面で<br>方向性を確認します。</p>
+                        <div class="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gray-300 -z-0"></div>
+                    </div>
+                    <div class="relative text-center group">
+                        <div class="w-20 h-20 bg-white border-2 border-navy text-navy rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-md group-hover:bg-navy group-hover:text-white transition-colors duration-300 z-10 relative">3</div>
+                        <h3 class="text-lg font-bold text-navy mb-3">契約締結</h3>
+                        <p class="text-sm text-gray-600">条件合意の上、<br>契約書を交わします。</p>
+                        <div class="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gray-300 -z-0"></div>
+                    </div>
+                    <div class="relative text-center group">
+                        <div class="w-20 h-20 bg-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold shadow-lg transform group-hover:scale-110 transition-transform duration-300 z-10 relative">4</div>
+                        <h3 class="text-lg font-bold text-navy mb-3">稼働開始</h3>
+                        <p class="text-sm text-gray-600">案件のアサインを開始し<br>スタートします。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 md:py-32 bg-white">
+        <div class="container mx-auto px-4" x-data="{ shown: false }" x-intersect.threshold.10="shown = true" :class="shown ? 'fade-enter-to' : 'fade-enter-from'" class="fade-enter-active">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-navy mb-12">よくある質問</h2>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <details class="group bg-gray-50 rounded-lg overflow-hidden border border-gray-100" x-data="{ isOpen: false }" @toggle="isOpen = !isOpen">
+                    <summary class="p-6 cursor-pointer font-bold text-navy flex items-center justify-between list-none hover:bg-gray-100 transition">
+                        <span>個人事業主でも応募可能ですか？</span>
+                        <svg class="w-5 h-5 text-gold transform transition-transform duration-300" :class="{ 'rotate-180': isOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed border-t border-gray-100 pt-4">
+                        はい、可能です。業務委託契約にてお取引させていただきます。開業届の提出状況など、詳細は面談時に確認させていただきます。
+                    </div>
+                </details>
+                <details class="group bg-gray-50 rounded-lg overflow-hidden border border-gray-100" x-data="{ isOpen: false }" @toggle="isOpen = !isOpen">
+                    <summary class="p-6 cursor-pointer font-bold text-navy flex items-center justify-between list-none hover:bg-gray-100 transition">
+                        <span>支払いのタイミングを教えてください</span>
+                        <svg class="w-5 h-5 text-gold transform transition-transform duration-300" :class="{ 'rotate-180': isOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed border-t border-gray-100 pt-4">
+                        基本的に月末締め翌月末払い（30日締め60日払い）となります。案件や契約内容により異なる場合がございますので、面談時に詳細をご説明します。
+                    </div>
+                </details>
+                <details class="group bg-gray-50 rounded-lg overflow-hidden border border-gray-100" x-data="{ isOpen: false }" @toggle="isOpen = !isOpen">
+                    <summary class="p-6 cursor-pointer font-bold text-navy flex items-center justify-between list-none hover:bg-gray-100 transition">
+                        <span>エリアの指定はありますか？</span>
+                        <svg class="w-5 h-5 text-gold transform transition-transform duration-300" :class="{ 'rotate-180': isOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-700 leading-relaxed border-t border-gray-100 pt-4">
+                        基本的に全国対応可能です。フルリモート案件が中心ですが、一部現地対応が必要な場合もあります。
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-20 md:py-32 bg-navy text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-gold rounded-full filter blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">お問い合わせ・応募</h2>
+            <p class="text-center text-gray-300 mb-12">まずは気軽にご連絡ください。<br>あなたとお話しできることを楽しみにしています。</p>
+            
+            <div class="max-w-2xl mx-auto bg-white text-gray-900 rounded-2xl shadow-2xl p-8 md:p-12"
+                 x-data="{
+                    loading: false,
+                    submitted: false,
+                    formData: { company: '', name: '', email: '', phone: '', specialty: '', message: '' },
+                    async submitForm() {
+                        this.loading = true;
+                        await new Promise(resolve => setTimeout(resolve, 1500));
+                        this.loading = false;
+                        this.submitted = true;
+                        this.formData = { company: '', name: '', email: '', phone: '', specialty: '', message: '' };
+                    }
+                 }">
+                
+                <form x-show="!submitted" @submit.prevent="submitForm()" class="space-y-6"
+                      x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                    
+                    <div x-show="loading" class="absolute inset-0 bg-white/90 z-50 flex flex-col items-center justify-center rounded-2xl">
+                        <div class="animate-spin rounded-full h-12 w-12 border-4 border-gray-200 border-t-navy mb-4"></div>
+                        <p class="text-navy font-bold animate-pulse">送信中...</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-navy mb-2">貴社名 / お名前 <span class="text-red-500">*</span></label>
+                            <input type="text" x-model="formData.company" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:bg-white transition" placeholder="例: 株式会社○○">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-navy mb-2">メールアドレス <span class="text-red-500">*</span></label>
+                            <input type="email" x-model="formData.email" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:bg-white transition" placeholder="example@co.jp">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-navy mb-2">電話番号 <span class="text-red-500">*</span></label>
+                            <input type="tel" x-model="formData.phone" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:bg-white transition" placeholder="090-0000-0000">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-navy mb-2">得意分野 <span class="text-red-500">*</span></label>
+                            <input type="text" x-model="formData.specialty" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:bg-white transition" placeholder="Web制作, システム開発など">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-navy mb-2">お問い合わせ内容 <span class="text-red-500">*</span></label>
+                        <textarea x-model="formData.message" required rows="4" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:bg-white transition" placeholder="詳細をご記入ください"></textarea>
+                    </div>
+
+                    <div class="flex items-start">
+                        <input type="checkbox" required id="privacy" class="mt-1 w-5 h-5 text-navy border-gray-300 rounded focus:ring-gold cursor-pointer">
+                        <label for="privacy" class="ml-3 text-sm text-gray-600 cursor-pointer">
+                            <a href="#" class="text-navy underline hover:text-gold">プライバシーポリシー</a>に同意の上、送信します。
+                        </label>
+                    </div>
+
+                    <button type="submit" :disabled="loading" class="w-full bg-navy text-white font-bold py-4 rounded-lg shadow-lg hover:shadow-xl hover:bg-blue-900 transform hover:-translate-y-1 transition-all duration-300">
+                        上記の内容で送信する
+                    </button>
+                </form>
+
+                <div x-show="submitted" class="text-center py-12"
+                     x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100">
+                    <div class="w-24 h-24 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-navy mb-4">送信が完了しました</h3>
+                    <p class="text-gray-600 mb-8">お問い合わせありがとうございます。<br>3営業日以内に担当者よりご連絡いたします。</p>
+                    <button @click="submitted = false" class="text-navy font-bold hover:text-gold underline decoration-2 underline-offset-4 transition">
+                        トップページに戻る
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <div class="text-2xl font-bold text-white mb-2">ビジネスパートナー募集</div>
+            <p class="text-sm mb-8">信頼と実績で未来を創る</p>
+            <p class="text-xs">&copy; 2025 Your Company Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
